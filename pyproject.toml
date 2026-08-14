@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "execsum-deal-brief"
+version = "0.1.0"
+description = "Daily Exec Sum deal-flow research brief delivered by email"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "kklounge"}]
+keywords = ["investment-banking", "deal-flow", "openai", "newsletter", "automation"]
+dependencies = [
+  "openai>=2.0.0,<3",
+  "pydantic>=2.8,<3",
+]
+
+[project.scripts]
+execsum-deal-brief = "execsum_deal_brief.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
